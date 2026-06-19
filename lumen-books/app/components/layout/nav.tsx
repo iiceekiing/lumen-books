@@ -16,7 +16,7 @@ export default function Navbar() {
           <span className="text-xl sm:text-2xl font-bold">Lumen Books</span>
         </Link>
 
-        <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 text-sm font-medium">
+        <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 text-base sm:text-lg font-medium">
           <Link href="/" className="hidden md:block">
             Home
           </Link>
