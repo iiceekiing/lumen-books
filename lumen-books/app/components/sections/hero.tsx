@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative mx-4 mt-6 overflow-hidden rounded-3xl sm:mx-6 lg:mx-10">
+    <section className="relative mt-6 overflow-hidden">
       <Image
         src="/assets/heroBg.png"
         alt=""
@@ -13,7 +13,7 @@ export default function Hero() {
         className="object-cover"
       />
 
-      <div className="relative flex flex-col-reverse items-center gap-10 px-6 py-12 sm:px-10 sm:py-16 lg:flex-row lg:gap-16">
+      <div className="relative mx-auto flex max-w-7xl flex-col-reverse items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:flex-row lg:gap-16 lg:px-10">
         <Image
           src="/assets/heroImage.jpeg"
           alt="A book floating between rows of shelves in a library"
@@ -35,7 +35,26 @@ export default function Hero() {
             great read at Lumen Books — curated by readers, for readers.
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+          <form
+            action="/books"
+            method="GET"
+            className="mx-auto mt-6 flex max-w-md lg:mx-0"
+          >
+            <input
+              type="text"
+              name="search"
+              placeholder="Search by title or author..."
+              className="flex-1 rounded-l-full border border-gray-300 bg-white px-5 py-3 text-sm text-black outline-none"
+            />
+            <button
+              type="submit"
+              className="rounded-r-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+            >
+              Search
+            </button>
+          </form>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-4 lg:justify-start">
             <Link
               href="/books"
               className="rounded-full bg-indigo-600 px-7 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
